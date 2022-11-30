@@ -1,0 +1,72 @@
+
+<h2>gmap</h2>
+
+    <%= form_with url: toppages_path, local: true, method: :get do |f| %>
+      <%= f.text_field :word , name: "search"%>
+      <%= f.submit "検索", class: "btn btn-primary" %>
+    <% end %>
+
+<div id='map'></div>
+
+<style>
+#map {
+  height: 600px;
+  width: 600px;
+}
+</style>
+
+<script>
+let map
+let geocoder
+  var marker = [];
+  var infoWindow = [];
+  var allShops = gon.places;
+  var markerData = [] 
+// 下の1行を追加 
+const display = document.getElementById('display')
+    for (var i = 0; i < allShops.length; i++) { 
+      markerData.push({
+      title: allShops[i]['name'],
+      lat: allShops[i]['lat'],
+      lng: allShops[i]['lng'],
+      content: allShops[i]['name'] + '<br><img src="./ippatsu.png" width="200"><br>'
+  });
+  };
+
+function initMap(){
+  geocoder = new google.maps.Geocoder()
+  var mapLatLng = new google.maps.LatLng({lat: 35.6809591, lng: 139.7673068});
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: mapLatLng, // 地図の中心座標を指定
+      zoom: 5, // 地図のデフォルトのズーム指定
+  });
+
+  for (var i = 0; i < markerData.length; i++) {
+    // 緯度経度のデータを作成
+    markerLatLng = new google.maps.LatLng({lat: markerData[i]['lat'], lng: markerData[i]['lng']});
+    marker[i] = new google.maps.Marker({
+      position: markerLatLng, // マーカーを立てる位置を指定
+      map: map, // マーカーを立てる地図を指定
+      title: markerData[i]['title'] // ツcヒント
+    });
+
+    // 吹き出しの設定
+    infoWindow[i] = new google.maps.InfoWindow({
+      // 吹き出しに表示する内容を設定する
+      content: `<a id="shop_content${i}" href="shops/show?content=${markerData[i].title}&lat=${markerData[i].lat}" >${markerData[i].title}</a><br />`
+    });
+      // マーカーにクリックイベントを追加
+      markerEvent(i);
+    }
+
+  }
+
+    function markerEvent(i) {
+      marker[i].addListener('click', function() {
+        // 吹き出しの表示
+        infoWindow[i].open(map, marker[i]);
+    });
+  }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API'] %>&callback=initMap" defer></script>

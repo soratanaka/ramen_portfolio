@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts
   resources :users, only: :show
-  root to: 'posts#index' 
+  resources :shops
+  resources :toppages, only: :index
+  root to: 'toppages#index'
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

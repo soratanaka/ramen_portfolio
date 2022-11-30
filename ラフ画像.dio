@@ -1,0 +1,385 @@
+<mxfile host="65bd71144e">
+    <diagram id="9xKOy5lxVVfgr25C3Fqn" name="ページ1">
+        <mxGraphModel dx="888" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="70" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="110" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="top_page" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="30" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="75" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="ログイン" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="82.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="新規作成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="82.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="google map&lt;br&gt;(現在地：ラーメン)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="85" y="130" width="110" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;ul&gt;&lt;li&gt;最新の投稿&lt;/li&gt;&lt;li&gt;×１０&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="85" y="260" width="105" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="70" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="110" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="75" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="ログイン" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="82.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="新規作成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="82.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="403" y="190" width="94" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="403" y="220" width="94" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="403" y="250" width="94" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="403" y="160" width="94" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="名前" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="160" width="60" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="メールアドレス" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="192.5" width="70" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="パスワード" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="222.5" width="60" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="パスワード(確認用)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="252.5" width="90" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="session_new" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="30" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="送信" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="280" width="30" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="70" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="110" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="75" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="ログイン" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="82.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="新規作成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="82.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="673" y="190" width="94" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="673" y="220" width="94" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="673" y="250" width="94" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="673" y="160" width="94" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="名前" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="160" width="60" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="メールアドレス" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="192.5" width="70" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="パスワード" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="222.5" width="60" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="パスワード(確認用)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="252.5" width="90" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="user_new" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="30" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="送信" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="280" width="30" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="新規登録" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="120" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="ログイン" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="120" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="お店を検索する" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="105" y="250" width="70" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="27.5" y="420" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="27.5" y="460" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="user_show" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="27.5" y="380" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="27.5" y="425" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="マイページへ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="135" y="436.25" width="57.5" height="7.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="お店を検索" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="195" y="432.5" width="50" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="最新の投稿*10" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="65" y="530" width="150" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="いいねした投稿一覧へ" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="490" width="52.5" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="お気に入りユーザー一覧へ" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="680" width="125" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="気になる&lt;br&gt;お店一覧へ" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="143.75" y="490" width="52.5" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="420" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="460" width="220" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="shop_search" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="304" y="380" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="425" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="ログイン" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="432.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="新規作成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="432.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="google map&lt;br&gt;(検索：ラーメン)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="336" y="480" width="110" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="&lt;ul&gt;&lt;li&gt;お店の&lt;/li&gt;&lt;li&gt;最新の投稿&lt;/li&gt;&lt;li&gt;×１０&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="365" y="620" width="105" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="お店を検索する" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="385" y="600" width="70" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="お店&lt;br&gt;情報" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="490" width="46" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="投稿する" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="580" width="46" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="420" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="460" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="425" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="ログイン" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="432.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="新規作成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="432.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="画像を投稿する" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="565" width="94" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="500" width="127" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="投稿内容" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="510" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="post_new" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="380" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="投稿" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="707" y="610" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="新規投稿" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="470" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="&lt;ul&gt;&lt;li&gt;最新の投稿&lt;/li&gt;&lt;li&gt;×１０&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="630" width="105" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="投稿する" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="446" y="710" width="46" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="投稿一覧" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="560" width="46" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="770" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="810" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="775" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="ログイン" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="782.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="新規作成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="782.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="shop_show" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="730" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="投稿" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="111.25" y="1040" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="お店の投稿" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="65" y="940" width="150" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="店名" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="820" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="google map&lt;br&gt;(検索：ラーメン)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="86.25" y="820" width="110" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="770" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="810" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="775" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="ログイン" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="782.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="新規作成" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="782.5" width="40" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="post_show" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="730" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="投稿内容" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="336" y="960" width="94" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="店名" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="432" y="820" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="google map&lt;br&gt;(検索：ラーメン)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="830" width="110" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="ユーザー名" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="432" y="980" width="90" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="いいねする" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="445" y="1010" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="お店&lt;br&gt;情報" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="850" width="45" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="1125" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="1165" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="&lt;b&gt;like_index&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="31.25" y="1080" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="1130" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="マイページへ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="137.5" y="1141.25" width="57.5" height="7.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="お店を検索" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="197.5" y="1137.5" width="50" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="気になるお店*10" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="67.5" y="1235" width="150" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="&lt;span style=&quot;font-weight: 700&quot;&gt;nice&lt;/span&gt;&lt;b&gt;_index&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="1080" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" value="&lt;span style=&quot;font-weight: 700&quot;&gt;relationships&lt;/span&gt;&lt;b&gt;_index&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="1080" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" value="あなたの気になるお店" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="68.75" y="1175" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="153" value="マイページへ" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="112.5" y="1395" width="60" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="154" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="307.5" y="1125" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="307.5" y="1165" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="156" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="307.5" y="1130" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" value="マイページへ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="415" y="1141.25" width="57.5" height="7.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="158" value="お店を検索" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="1137.5" width="50" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="159" value="いいね投稿*10" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="345" y="1235" width="150" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="あなたのいいねコメント一覧" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="346.25" y="1175" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" value="マイページへ" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="1395" width="60" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="162" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="1125" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="1165" width="220" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="164" value="ラーメン道" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="1130" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="マイページへ" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="677.5" y="1141.25" width="57.5" height="7.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="166" value="お店を検索" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="737.5" y="1137.5" width="50" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="167" value="フォローユーザー" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" parent="1" vertex="1">
+                    <mxGeometry x="607.5" y="1235" width="150" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="あなたがフォローしたユーザー" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="608.75" y="1175" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="169" value="マイページへ" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="652.5" y="1395" width="60" height="10" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

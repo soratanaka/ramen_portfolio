@@ -11,6 +11,6 @@ class ToppagesController < ApplicationController
     gon.places = @places
     #  byebug
     end
-          # byebug
+          #  byebug
   end
 end

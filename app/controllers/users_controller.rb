@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
+    if Post.find_by(user_id:current_user.id)
+      @posts = Post.where(user_id:current_user.id)
+    end
+    # byebug
   end
 
   private

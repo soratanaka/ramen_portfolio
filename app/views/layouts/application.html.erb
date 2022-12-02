@@ -10,17 +10,21 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <header style = "display:flex; justify-content: center;">
     <% if user_signed_in? %>
-      <%= link_to "ユーザー", user_path(current_user)%> #追記
-
+      <%= link_to "ユーザー", user_path(current_user)%> 
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+      <%= link_to 'トップページ', toppages_path %>
     <% else %>
       <%= link_to 'ログイン', new_user_session_path %>
       <%= link_to 'サインアップ', new_user_registration_path %>
+      <%= link_to 'トップページ', toppages_path %>
     <% end %>
     <p class="notice"><%= notice %></p>
     <hr />
+  </header>
+  
+    <body>
     <%= yield %>
   </body>
 </html>

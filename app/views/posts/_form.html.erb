@@ -11,6 +11,13 @@
     </div>
   <% end %>
 
+  <td><%= @shop[:shop_id] %></td>
+  <td><%= @shop[:name] %></td>
+  <td><%= @shop[:latitude] %></td>
+  <td><%= @shop[:longitude] %></td>
+
+  <%= form.hidden_field :shop_id, :value => @shop[:shop_id] %>
+
   <div class="field">
     <%= form.label :content %>
     <%= form.text_field :content %>

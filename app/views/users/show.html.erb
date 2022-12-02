@@ -10,9 +10,29 @@
     <%= @user.email %>
 </p>
 
-<h1>Ajax#index</h1>
-<p id="hoge">赤色になるよ</p>
+  <table>
+<% unless @posts.nil? %>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<script>
-  $("#hoge").css("color","red")
-</script>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.content %></td>
+        <td><img src="<%= post.image %>" width="100"></td>  
+          
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <%else%>
+    <p>投稿はありません<p>
+<% end %>
+</table>

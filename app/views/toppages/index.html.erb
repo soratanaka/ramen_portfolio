@@ -83,7 +83,7 @@ function initMap(){
     // 吹き出しの設定
     infoWindow[i] = new google.maps.InfoWindow({
       // 吹き出しに表示する内容を設定する
-      content: `<a id="shop_content${i}" href="shops/show?content=${markerData[i].title}&lat=${markerData[i].lat}" >${markerData[i].title}</a><br />`
+      content: `<a id="shop_content${i}" href="shops/show?content=${markerData[i].title}&lat=${markerData[i].lat}&lng=${markerData[i].lng}" >${markerData[i].title}</a><br />`
     });
       // マーカーにクリックイベントを追加
       markerEvent(i);

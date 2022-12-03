@@ -85,4 +85,5 @@ Rails.application.configure do
     :authentication => 'plain',
     :user_name => 'rari4423@gmail.com',
     :password => ENV['GOOGLE_MAIL_API']
+  }
 end

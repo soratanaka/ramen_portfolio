@@ -126,6 +126,7 @@ Rails.application.configure do
     :port => '587',
     :domain => 'smtp.gmail.com',
     :authentication => 'plain',
+    :openssl_verify_mode: 'none',
     :user_name => 'rari4423@gmail.com',
     :password => ENV['GOOGLE_MAIL_API']
   }

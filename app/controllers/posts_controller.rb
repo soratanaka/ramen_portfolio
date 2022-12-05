@@ -10,18 +10,20 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @shop = params[:shop] 
+    @post.shop_id = params[:shop_id]
     # byebug
   end
 
   def edit
+    @shop = params[:shop] 
   end
 
   def create
     @post = Post.new(post_params)
     respond_to do |format|
+      # byebug
       if @post.save
-        format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
+        format.html { redirect_to shop_path(@post.shop_id), notice: "Post was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
       end

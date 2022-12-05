@@ -2,13 +2,13 @@ class ShopsController < ApplicationController
 
   def create
     @shop = Shop.new(shop_params)
-    shop = params[:shop]
     respond_to do |format|
       if @shop.save
-        format.html { redirect_to controller: :posts, action: :new ,shop: {shop_id:@shop.id ,name:shop[:name], latitude:shop[:latitude], longitude:shop[:longitude]}}
+        format.html { redirect_to controller: :posts, action: :new ,shop_id:@shop.id}
       else
         format.html { render :show}
       end
+      # byebug
     end
   end
 
@@ -17,17 +17,35 @@ class ShopsController < ApplicationController
   end
 
   def show
-    @shop = Shop.new
-    @name = params[:content]
-    @lat = params[:lat]
-    @lng = params[:lng]
     # byebug
-    if Shop.find_by(name: @name, latitude: @lat, longitude: @lng)
-      @shop_config = Shop.find_by(name: @name, latitude: @lat, longitude: @lng)
-      if Post.find_by(shop_id:@shop_config.id)
-        @posts = Post.where(shop_id:@shop_config.id)
+    if Shop.find_by(name:params[:content])
+      @shop = Shop.find_by(name:params[:content])
+      @name = @shop.name
+      @address = @shop.address
+      @place_id = @shop.place_id
+      if Post.find_by(shop_id:@shop.id)
+        @posts = Post.where(shop_id:@shop.id)
       end
+    elsif params[:id] != "show"
+      @shop = Shop.find(params[:id])
+      @name = @shop.name
+      @address = @shop.address
+      @place_id = @shop.place_id
+      if Post.find_by(shop_id:@shop.id)
+        @posts = Post.where(shop_id:@shop.id)
+      end
+    else
+      @name = params[:content]
+      @lat = params[:lat]
+      @lng = params[:lng]
+      @address = params[:add]
+      @place_id = params[:place_id]
     end
+    @client = ::GooglePlaces::Client.new(ENV['GOOGLE_MAP_API'])
+    @shop_config = @client.spot(@place_id , language: 'ja')
+    @opening_time = @shop_config.opening_hours
+    @reviews = @shop_config.reviews
+    # @photos =  @shop_config.photos
     # byebug
   end
 
@@ -35,6 +53,6 @@ class ShopsController < ApplicationController
   private
 
   def shop_params
-    params.require(:shop).permit(:name, :latitude, :longitude).merge(user_id:current_user.id)
+    params.require(:shop).permit(:name, :address, :latitude, :longitude ,:place_id).merge(user_id:current_user.id)
   end
 end

@@ -1,11 +1,19 @@
-<h1>test</h1>
+<h1>店舗情報</h1>
 
-<% unless @name.nil? %>
-<td><%= @name %></td>
-<td><%= @lat %></td>
-<td><%= @lng %></td>
+<p>店舗名：<%= @name %></p>
+<p>住所　：<%= @address  %></p>
+<% if @opening_time["open_now"] == true %>
+  <p>営業　；営業中</p>
+<%else%>
+  <p>営業　：準備中</p>
+<%end%>
 
-<% end %>
+<h2>opening_time</h2>
+<% @opening_time["weekday_text"].each do |opening_day| %>
+  <p><%= opening_day %></p>
+  <% end %>
+
+
   <table>
 <% unless @posts.nil? %>
   <thead>
@@ -30,8 +38,17 @@
 <% end %>
 </table>
 
-  <% if @shop_config.nil? %>
-    <td><%= link_to '投稿する(shop)',shops_path(shop: {name:@name, latitude:@lat, longitude:@lng}), method: :post %></td>
+  <% if @shop.nil? %>
+    <td><%= link_to '投稿する(shop)',shops_path(shop: {name:@name, latitude:@lat, longitude:@lng, address:@address, place_id:@place_id}), method: :post %></td>
   <% else %>
-    <td><%= link_to '投稿する(post)',new_post_path(shop: {shop_id:@shop_config.id ,name:@name, latitude:@lat, longitude:@lng})%></td>
+    <td><%= link_to '投稿する(post)',new_post_path(shop_id:@shop.id)%></td>
 <% end %>
+
+<h3>GoogleMapでのレビュー</h3>
+  <%if @reviews.nil?%>
+    <p>投稿がありません</p>
+  <%else%>
+    <% @reviews.each do |review| %>
+      <p><%= review.text %></p>
+    <% end %>
+  <% end %>

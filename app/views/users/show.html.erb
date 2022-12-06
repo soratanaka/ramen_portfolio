@@ -1,6 +1,7 @@
 <h2>Users</h2>
 <hr />
 
+
 <p>
     <strong>ユーザー名</strong>
     <%= @user.name %>
@@ -8,6 +9,23 @@
 <p>
     <strong>e-mail</strong>
     <%= @user.email %>
+    <%= render 'follow_form', user: @user %>
+</div>
+</p>
+
+<% if @user.id==@current_user.id %>
+<%= link_to '編集', edit_profile_path, class: 'btn btn-success float-right' %>
+<% end %>
+
+<%= image_tag @user.avatar.url %>
+
+<p>
+  <strong>"自己紹介"</strong>
+  <% if @user.plofile.present? %>
+    <%= @user.plofile %>
+  <% else %>
+    <p>無記入<p>
+  <% end %>
 </p>
 
   <table>

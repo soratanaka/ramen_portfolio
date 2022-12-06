@@ -1,4 +1,6 @@
 class NicesController < ApplicationController
+
+def create 
   nice = current_user.nices.create(post_id: params[:post_id])
   redirect_to posts_path, notice: "#{nice.post.user.name}を気になる登録しました"
 end

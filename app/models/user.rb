@@ -32,7 +32,7 @@ class User < ApplicationRecord
       user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
       user.avatar = nil
       user.plofile = "ゲスト"
-      usre.name = "ゲストユーザー(一般)"
+      user.name = "ゲストユーザー(一般)"
     end
   end
 
@@ -43,7 +43,7 @@ class User < ApplicationRecord
       user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
       user.avatar = nil
       user.plofile = "ゲスト"
-      usre.name = "ゲストユーザー(管理者)"
+      user.name = "ゲストユーザー(管理者)"
     end
   end
 end

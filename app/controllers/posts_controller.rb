@@ -1,10 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
 
-  def index
-    @posts = Post.all
-  end
-
   def show
     @nice = current_user.nices.find_by(post_id: @post.id)
   end
@@ -44,7 +40,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
+      format.html { redirect_to user_url(current_user.id), notice: "Post was successfully destroyed." }
     end
   end
 

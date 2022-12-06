@@ -5,13 +5,11 @@ class ShopsController < ApplicationController
     @shop = Shop.new(shop_params)
     if params[:like_id] == "true"
         if @shop.save
-          # byebug
           like = current_user.likes.create(shop_id: @shop.id)
           redirect_to shop_path(@shop.id) , notice: "#{@shop.name}を気になる登録しました"
         else
           render :show
         end
-        # byebug
     else
       respond_to do |format|
         if @shop.save
@@ -19,7 +17,6 @@ class ShopsController < ApplicationController
         else
           format.html { render :show}
         end
-      # byebug
       end
     end
   end
@@ -29,7 +26,6 @@ class ShopsController < ApplicationController
   end
 
   def show
-    # byebug
     if Shop.find_by(name:params[:content])
       @shop = Shop.find_by(name:params[:content])
       @name = @shop.name
@@ -59,11 +55,8 @@ class ShopsController < ApplicationController
     @shop_config = @client.spot(@place_id , language: 'ja')
     @opening_time = @shop_config.opening_hours
     @reviews = @shop_config.reviews
-
-    # @photos =  @shop_config.photos
-    # byebug
+    # @photos =  @shop_config.photos やる可能性があるので残し
   end
-
 
   private
 

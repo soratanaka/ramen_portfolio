@@ -25,4 +25,25 @@ class User < ApplicationRecord
   def unfollow!(other_user)
     active_relationships.find_by(followed_id: other_user.id).destroy
   end
+
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+      user.avatar = nil
+      user.plofile = "ゲスト"
+      usre.name = "ゲストユーザー(一般)"
+    end
+  end
+
+  def self.admin_guest
+    find_or_create_by!(email: 'admin_guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.admin = true
+      user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+      user.avatar = nil
+      user.plofile = "ゲスト"
+      usre.name = "ゲストユーザー(管理者)"
+    end
+  end
 end

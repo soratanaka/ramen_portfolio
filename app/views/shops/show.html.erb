@@ -13,6 +13,7 @@
   <p><%= opening_day %></p>
   <% end %>
 
+  
 
   <table>
 <% unless @posts.nil? %>
@@ -20,7 +21,6 @@
     <tr>
       <th>Content</th>
       <th>Image</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -38,11 +38,19 @@
 <% end %>
 </table>
 
+<%if user_signed_in? %>
   <% if @shop.nil? %>
-    <td><%= link_to '投稿する(shop)',shops_path(shop: {name:@name, latitude:@lat, longitude:@lng, address:@address, place_id:@place_id}), method: :post %></td>
+    <%= link_to 'お気に入りする', shops_path(shop: {name:@name, latitude:@lat, longitude:@lng, address:@address, place_id:@place_id},like_id:true), method: :post, class: 'btn btn-primary' %>
+    <td><%= link_to '投稿する(shop)',shops_path(shop: {name:@name, latitude:@lat, longitude:@lng, address:@address, place_id:@place_id},like_id:false), method: :post %></td>
   <% else %>
+    <% if @like.present? %>
+      <%= link_to 'お気に入り解除する', like_path(id: @like.id), method: :delete, class: 'btn btn-danger' %>
+    <% else %>
+      <%= link_to 'お気に入りする', likes_path(shop_id:@shop.id), method: :post, class: 'btn btn-primary' %>
+    <% end %>
     <td><%= link_to '投稿する(post)',new_post_path(shop_id:@shop.id)%></td>
-<% end %>
+  <% end %>
+<%end%>
 
 <h3>GoogleMapでのレビュー</h3>
   <%if @reviews.nil?%>

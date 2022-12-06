@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @nice = current_user.nices.find_by(post_id: @post.id)
   end
 
   def new

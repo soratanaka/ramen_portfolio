@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :shops
   resources :toppages, only: :index
   root to: 'toppages#index'
+  resources :nices, only: [:create, :destroy]
+  resources :likes, only: [:create, :destroy]
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

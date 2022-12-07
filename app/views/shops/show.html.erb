@@ -2,16 +2,24 @@
 
 <p>店舗名：<%= @name %></p>
 <p>住所　：<%= @address  %></p>
-<% if @opening_time["open_now"] == true %>
-  <p>営業　；営業中</p>
+<% unless @opening_time["open_now"].nil? %>
+  <% if @opening_time["open_now"] == true %>
+    <p>営業　；営業中</p>
+  <%else%>
+    <p>営業　：準備中</p>
+  <%end%>
 <%else%>
-  <p>営業　：準備中</p>
+  <p>営業　：未登録</p>
 <%end%>
 
 <h2>opening_time</h2>
-<% @opening_time["weekday_text"].each do |opening_day| %>
-  <p><%= opening_day %></p>
+<% unless @opening_time["weekday_text"].nil? %>
+  <% @opening_time["weekday_text"].each do |opening_day| %>
+    <p><%= opening_day %></p>
   <% end %>
+<% else %>
+  <p>未登録</p>
+<% end %>
 
   
 

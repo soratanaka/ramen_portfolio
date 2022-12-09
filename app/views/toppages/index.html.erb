@@ -17,6 +17,25 @@
 </ul>
 </div>
 <!--<div jstcache="1891" class="Uf0tqf loaded" style="width: 406px; height: 406px; background-image: url(&quot;https://lh5.googleusercontent.com/p/AF1QipNuaUROeipAcCiFCMFb-YqzTBvWA8MkNO0YQB-V=s406-k-no&quot;);" jsan="7.Uf0tqf,7.loaded,5.width,5.height,5.background-image"> </div>-->
+  <table>
+  <tbody>
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= link_to post.user.name,user_path(post.user.id) %></td>
+    <td><%= link_to post.shop.name,shop_path(post.shop.id) %></td>
+    <td><%= post.content %></td>
+    <td><img src="<%= post.image %>" width="100"></td>    
+    <td><%= link_to 'Show', post %></td>
+    <%if user_signed_in? %>
+    <% if post.user_id == current_user.id %>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+    <% end %>
+  </tr>
+<% end %>
+  </tbody>
+  </table>
 
 <style>
 #map {
@@ -39,8 +58,8 @@ var display = document.getElementById('display')
       title: allShops[i]['name'],
       lat: allShops[i]['lat'],
       lng: allShops[i]['lng'],
-      add: allShops[1]['formatted_address'],
-      place_id : allShops[1]['place_id'],
+      add: allShops[0]['formatted_address'],
+      place_id : allShops[0]['place_id'],
       content: allShops[i]['name'] + '<br><img src="./ippatsu.png" width="200"><br>'
   });
   };

@@ -21,17 +21,15 @@ class ShopsController < ApplicationController
     end
   end
 
-  def index
-    
-  end
-
   def show
     if Shop.find_by(name:params[:content])
       @shop = Shop.find_by(name:params[:content])
       @name = @shop.name
       @address = @shop.address
       @place_id = @shop.place_id
-      @like = current_user.likes.find_by(shop_id: @shop.id)
+      if user_signed_in?
+        @like = current_user.likes.find_by(shop_id: @shop.id)
+      end
       if Post.find_by(shop_id:@shop.id)
         @posts = Post.where(shop_id:@shop.id)
       end
@@ -40,7 +38,9 @@ class ShopsController < ApplicationController
       @name = @shop.name
       @address = @shop.address
       @place_id = @shop.place_id
-      @like = current_user.likes.find_by(shop_id: @shop.id)
+      if user_signed_in?
+        @like = current_user.likes.find_by(shop_id: @shop.id)
+      end
       if Post.find_by(shop_id:@shop.id)
         @posts = Post.where(shop_id:@shop.id)
       end

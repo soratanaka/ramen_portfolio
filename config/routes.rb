@@ -7,13 +7,17 @@ Rails.application.routes.draw do
     passwords: 'users/passwords'
   }
   resources :posts, only: %i[new create edit updaet destroy show]
-  resources :users, only: :show 
+  resources :users, only: :show do
+    member do
+      get :followings, :followers
+    end
+  end
   resources :shops
   resources :toppages, only: :index
   root to: 'toppages#index'
-  resources :nices, only: %i[create destroy]
-  resources :likes, only: %i[create destroy]
-  resources :relationships, only: %i[create destroy]
+  resources :nices, only: %i[create destroy index]
+  resources :likes, only: %i[create destroy index]
+  resources :relationships, only: %i[create destroy index]
   resource :profile,only: %i[edit update]
 
   devise_scope :user do

@@ -2,22 +2,22 @@
 
 <p>店舗名：<%= @name %></p>
 <p>住所　：<%= @address  %></p>
-<% unless @opening_time["open_now"].nil? %>
+<% begin %>
   <% if @opening_time["open_now"] == true %>
     <p>営業　；営業中</p>
   <%else%>
     <p>営業　：準備中</p>
   <%end%>
-<%else%>
+<% rescue NoMethodError %>
   <p>営業　：未登録</p>
 <%end%>
 
 <h2>opening_time</h2>
-<% unless @opening_time["weekday_text"].nil? %>
+<% begin %>
   <% @opening_time["weekday_text"].each do |opening_day| %>
     <p><%= opening_day %></p>
   <% end %>
-<% else %>
+<% rescue NoMethodError %>
   <p>未登録</p>
 <% end %>
 
@@ -39,9 +39,11 @@
         <td><%= post.content %></td>
         <td><img src="<%= post.image %>" width="100"></td>    
         <td><%= link_to 'Show', post %></td>
+        <%if user_signed_in? %>
         <% if post.user_id == current_user.id %>
           <td><%= link_to 'Edit', edit_post_path(post) %></td>
           <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
         <% end %>
       </tr>
     <% end %>
@@ -66,7 +68,7 @@
 <%end%>
 
 <h3>GoogleMapでのレビュー</h3>
-  <%if @reviews.nil?%>
+  <%if @reviews.nil? || @reviews.empty?%>
     <p>投稿がありません</p>
   <%else%>
     <% @reviews.each do |review| %>

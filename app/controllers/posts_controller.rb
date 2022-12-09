@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: [ :show ]
   def show
-    @nice = current_user.nices.find_by(post_id: @post.id)
+    if user_signed_in?
+      @nice = current_user.nices.find_by(post_id: @post.id)
+    end
   end
 
   def new
@@ -45,11 +47,10 @@ class PostsController < ApplicationController
   end
 
   private
-    def set_post
-      @post = Post.find(params[:id])
-    end
-
-    def post_params
-      params.require(:post).permit(:content, :image, :image_cache, :shop_id).merge(user_id:current_user.id)
-    end
+  def set_post
+    @post = Post.find(params[:id])
+  end
+  def post_params
+    params.require(:post).permit(:content, :image, :image_cache, :shop_id).merge(user_id:current_user.id)
+  end
 end

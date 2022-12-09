@@ -1,0 +1,12 @@
+<h1>いいね一覧</h1>
+
+
+<% @nice_posts.each do |post| %>
+  <tr>
+    <td><%= link_to post.user.name, user_path(post.user.id) %></td>
+    <td><%= link_to post.shop.name, shop_path(post.shop.id) %></td>
+    <td><%= post.content %></td>
+    <td><img src="<%= post.image %>" width="100"></td>    
+    <td><%= link_to 'Show', post %></td>
+  </tr>
+<% end %>

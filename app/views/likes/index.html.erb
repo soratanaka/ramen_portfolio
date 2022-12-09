@@ -1,0 +1,10 @@
+<h1>いいね一覧</h1>
+
+
+<% @like_shops.each do |shop| %>
+  <tr>
+    <td><%= link_to shop.name, shop_path(shop.id) %></td>
+    <td><%= shop.address %></td>
+    <td><%= link_to 'Show', shop %></td>
+  </tr>
+<% end %>

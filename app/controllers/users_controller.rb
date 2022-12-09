@@ -1,10 +1,21 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, only: %i[ followings followers ]
+
   def show
     @user = User.find(params[:id])
     if Post.find_by(user_id:current_user.id)
       @posts = Post.where(user_id:current_user.id)
     end
-    # byebug
+  end
+
+  def followings
+    @user = User.find(params[:id])
+    @users = @user.following
+  end
+
+  def followers
+    @user = User.find(params[:id])
+    @users = @user.followers
   end
 
   private

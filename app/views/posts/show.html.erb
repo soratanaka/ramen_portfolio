@@ -1,20 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+    <p>  <% @post.content %></p>
   <strong>Image:</strong>
-  <%= image_tag @post.image.url %>
+  <% if @post.image? %>
+    <%= image_tag @post.image.url %>
+  <% else %>
+    <p>no image</p>
+  <% end %>
 </p>
 
 <%if user_signed_in? %>
 
   <% unless @post.user_id == current_user.id %>
-  <% if @nice.present? %>
-    <%= link_to 'お気に入り解除する', nice_path(id: @nice.id), method: :delete, class: 'btn btn-danger' %>
+    <% if @nice.present? %>
+      <%= link_to 'お気に入り解除する', nice_path(id: @nice.id), method: :delete, class: 'btn btn-danger' %>
+    <% else %>
+      <%= link_to 'お気に入りする', nices_path(post_id: @post.id), method: :post, class: 'btn btn-primary' %>
+    <% end %>
   <% else %>
-    <%= link_to 'お気に入りする', nices_path(post_id: @post.id), method: :post, class: 'btn btn-primary' %>
-  <% end %>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
   <% end %>
 
 <% end %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |

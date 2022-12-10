@@ -21,9 +21,7 @@
   <p>未登録</p>
 <% end %>
 
-  
-
-  <table>
+<table>
 <% unless @posts.nil? %>
   <thead>
     <tr>
@@ -68,10 +66,10 @@
 <%end%>
 
 <h3>GoogleMapでのレビュー</h3>
-  <%if @reviews.nil? || @reviews.empty?%>
-    <p>投稿がありません</p>
-  <%else%>
-    <% @reviews.each do |review| %>
-      <p><%= review.text %></p>
-    <% end %>
+<%if @reviews.nil? || @reviews.empty?%>
+  <p>投稿がありません</p>
+<%else%>
+  <% @reviews.each do |review| %>
+    <p><%= review.text %></p>
   <% end %>
+<% end %>

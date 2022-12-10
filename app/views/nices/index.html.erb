@@ -1,6 +1,5 @@
 <h1>いいね一覧</h1>
 
-
 <% @nice_posts.each do |post| %>
   <tr>
     <td><%= link_to post.user.name, user_path(post.user.id) %></td>

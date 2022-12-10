@@ -17,7 +17,6 @@ class User < ApplicationRecord
     active_relationships.create!(followed_id: other_user.id)
   end
   
-  #フォローしているかどうかを確認する
   def following?(other_user)
     active_relationships.find_by(followed_id: other_user.id)
   end
@@ -29,7 +28,7 @@ class User < ApplicationRecord
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
-      user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+      user.confirmed_at = Time.now
       user.avatar = nil
       user.plofile = "ゲスト"
       user.name = "ゲストユーザー(一般)"
@@ -40,7 +39,7 @@ class User < ApplicationRecord
     find_or_create_by!(email: 'admin_guest@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
       user.admin = true
-      user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+      user.confirmed_at = Time.now￥
       user.avatar = nil
       user.plofile = "ゲスト"
       user.name = "ゲストユーザー(管理者)"

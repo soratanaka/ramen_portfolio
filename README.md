@@ -9,13 +9,12 @@
 - ###### device機能
 - ###### フォロー機能
 - ###### お気に入り機能
-- ###### （予定）AWS EC2
-- ###### （予定）Ajaxを使ったコメント機能
+- ###### AWS EC2
 
 ### カリキュラム外の技術
 
 - ###### Google Map Embed API
-- ###### geocoder
+- ###### Google Map Places
 
 ### 実行手順
 

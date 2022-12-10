@@ -20,7 +20,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     respond_to do |format|
-      # byebug
       if @post.save
         format.html { redirect_to shop_path(@post.shop_id), notice: "Post was successfully created." }
       else
@@ -50,6 +49,7 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
+  
   def post_params
     params.require(:post).permit(:content, :image, :image_cache, :shop_id).merge(user_id:current_user.id)
   end

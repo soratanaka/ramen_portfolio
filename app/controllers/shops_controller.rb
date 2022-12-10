@@ -1,7 +1,6 @@
 class ShopsController < ApplicationController
 
   def create
-    # byebug
     @shop = Shop.new(shop_params)
     if params[:like_id] == "true"
         if @shop.save
@@ -55,7 +54,6 @@ class ShopsController < ApplicationController
     @shop_config = @client.spot(@place_id , language: 'ja')
     @opening_time = @shop_config.opening_hours
     @reviews = @shop_config.reviews
-    # @photos =  @shop_config.photos やる可能性があるので残し
   end
 
   private

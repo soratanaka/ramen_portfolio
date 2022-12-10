@@ -3,8 +3,8 @@ class SendEmail
   include SendGrid
 
   def self.test_email
-    from = Email.new(email: 'rari4423@gmail.com') # SendGridの管理画面でSenderに登録したアドレス
-    to = Email.new(email: 'tanakasora39@gmail.com') # 送信したいアドレス
+    from = Email.new(email: 'rari4423@gmail.com')
+    to = Email.new(email: 'tanakasora39@gmail.com')
     subject = 'テストホゲホゲ'
     content = Content.new(type: 'text/plain', value: 'ハローハロー')
     mail = Mail.new(from, subject, to, content)

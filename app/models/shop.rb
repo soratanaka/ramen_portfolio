@@ -6,5 +6,5 @@ class Shop < ApplicationRecord
   validates :place_id, presence: true
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_many :like_users, through: :favorites, source: :user
+  has_many :like_users, through: :likes, source: :user
 end

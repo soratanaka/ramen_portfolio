@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     passwords: 'users/passwords'
   }
-  resources :posts, only: %i[new create edit updaet destroy show]
+  resources :posts, only: %i[new create edit update destroy show]
   resources :users, only: :show do
     member do
       get :followings, :followers

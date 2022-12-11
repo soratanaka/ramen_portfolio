@@ -120,6 +120,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (1.1.0)
     diff-lcs (1.5.0)
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
@@ -400,6 +401,7 @@ DEPENDENCIES
   carrierwave
   database_rewinder
   devise
+  devise-bootstrap-views (~> 1.0)
   dotenv-rails
   ed25519
   factory_bot_rails

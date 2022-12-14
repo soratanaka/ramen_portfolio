@@ -10,7 +10,7 @@ RSpec.describe 'ユーザー管理機能', type: :system do
     context 'ユーザーがログインせずにタスク一覧画面へ飛べない' do
       it 'タスク一覧画面に飛ぼうとしたとき、ログイン画面に遷移すること' do
         visit new_post_path(shop_id:@shop.id)
-        expect(page).to have_content "Log in"
+        expect(page).to have_content "ログイン"
       end
     end
     context 'ユーザーを新規作成した場合' do
@@ -20,8 +20,8 @@ RSpec.describe 'ユーザー管理機能', type: :system do
         fill_in 'user[email]', with: "test@email.com"
         fill_in 'user[password]', with: "testtest"
         fill_in 'user[password_confirmation]', with: "testtest"
-        click_on 'Sign up'
-        expect(page).to have_content "gmap"
+        click_on 'アカウント登録'
+        expect(page).to have_content "本人確認用のメールを送信しました。"
       end
     end
   end

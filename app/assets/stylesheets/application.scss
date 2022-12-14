@@ -93,5 +93,21 @@ header li{
   height: 100px;
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #44aa33;
+  background-color: #4D4D4D;
+  display: table;
+}
 
+footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
 

@@ -2,11 +2,13 @@
   <p id="notice"><%= notice %></p>
 
   <h1>
-    <h1>name:</h1>
+    <h1><%= t '.Name' %>:</h1>
     <h3><%= @post.user.name %></h3>
-    <h1>Content:</h1>
+
+    <h1><%= t '.Content' %>:</h1>
     <h3><%= @post.content %></h3>
-    <h1>Image:</h1>
+    
+    <h1><%= t '.Image' %>:</h1>
     <% if @post.image? %>
       <%= image_tag @post.image.url %>
     <% else %>
@@ -23,7 +25,7 @@
         <%= link_to 'お気に入りする', nices_path(post_id: @post.id), method: :post, class: 'btn btn-primary' %>
       <% end %>
     <% else %>
-      <%= link_to 'Edit', edit_post_path(@post) ,class: "btn btn-primary"%> 
+      <%= link_to t('.Edit'), edit_post_path(@post) ,class: "btn btn-primary"%> 
     <% end %>
 
   <% end %>

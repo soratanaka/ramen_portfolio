@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     respond_to do |format|
       if @post.save
-        format.html { redirect_to shop_path(@post.shop_id), notice: "Post was successfully created." }
+        format.html { redirect_to shop_path(@post.shop_id), notice: t("notice.post.create") }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to post_url(@post), notice: "Post was successfully updated." }
+        format.html { redirect_to post_url(@post), notice: t("notice.post.update") }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to user_url(current_user.id), notice: "Post was successfully destroyed." }
+      format.html { redirect_to user_url(current_user.id), notice: t("notice.post.destroy") }
     end
   end
 

@@ -46,7 +46,7 @@ RSpec.describe '投稿テスト', type: :system do
         click_button "ログイン"
         visit new_post_path(shop_id:@shop.id)
         fill_in 'post[content]', with: "test"
-        click_on "Create Post"
+        click_on "登録する"
         expect(page).to have_content "test"
       end
     end
@@ -57,7 +57,7 @@ RSpec.describe '投稿テスト', type: :system do
         fill_in 'user[password]', with: @user.password
         click_button "ログイン"
         visit new_post_path(shop_id:@shop.id)
-        click_on "Create Post"
+        click_on "登録する"
         expect(visit shop_path(@shop.id)).not_to have_content "test"
       end
     end
@@ -69,7 +69,7 @@ RSpec.describe '投稿テスト', type: :system do
         click_button "ログイン"
         visit edit_post_path(@post.id)
         fill_in 'post[content]', with: "testtest"
-        click_on "Update Post"
+        click_on "更新する"
         expect(page).to have_content "testtest"
       end
       it '投稿の削除が可能' do
@@ -77,7 +77,13 @@ RSpec.describe '投稿テスト', type: :system do
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
         click_button "ログイン"
-        expect(page).to have_content "testtest"
+        visit user_path(@user.id)
+        execute_script('window.scrollBy(0,10000)')
+        sleep 1
+        page.accept_confirm do
+          click_on '削除', match: :first
+        end
+        expect(page).to have_content "投稿を削除しました！"
       end
     end
   end

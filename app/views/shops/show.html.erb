@@ -5,9 +5,9 @@
       <% unless @posts.nil? %>
         <thead>
           <tr style="color: #fff;">
-            <th>name</th>
-            <th>Content</th>
-            <th>Image</th>
+            <th><%= t '.Name' %></th>
+            <th><%= t '.Content' %></th>
+            <th><%= t '.Image' %></th>
           </tr>
         </thead>
 
@@ -17,11 +17,11 @@
               <td><%= link_to post.user.name,user_path(post.user.id) %></td>
               <td><%= post.content %></td>
               <td><img src="<%= post.image %>" width="200"></td>    
-              <td><%= link_to 'Show', post %></td>
+              <td><%= link_to (t '.Show'), post %></td>
               <%if user_signed_in? %>
               <% if post.user_id == current_user.id %>
-                <td><%= link_to 'Edit', edit_post_path(post) %></td>
-                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to (t '.Edit'), edit_post_path(post) %></td>
+                <td><%= link_to (t '.Destroy'), post, method: :delete %></td>
               <% end %>
               <% end %>
             </tr>
@@ -48,7 +48,7 @@
         <p>営業　：未登録</p>
       <%end%>
 
-      <h2 style="color: #fff;">opening_time</h2>
+      <h2 style="color: #fff;"><%= t '.opening_time' %></h2>
       <% begin %>
         <% @opening_time["weekday_text"].each do |opening_day| %>
           <p><%= opening_day %></p>

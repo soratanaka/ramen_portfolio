@@ -15,7 +15,7 @@ RSpec.describe 'フォローテスト', type: :system do
         fill_in 'user[password]', with: @user.password
         click_button "ログイン"
         visit user_path(@user.id)
-        expect(page).to have_button 'フォロー'
+        expect(page).not_to have_button 'フォロー'
       end
       it 'フォローする' do
         visit new_user_session_path 

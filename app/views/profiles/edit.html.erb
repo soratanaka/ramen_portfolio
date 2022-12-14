@@ -3,18 +3,18 @@
   <div class = "card mt-5" style="background-color: #f3682d;">
     <div class = "card-body" style="color: #fff;">
       <div class="field">
-        <%= f.label :name %>
+        <%= f.label :name, t('.name')%>
         <%= f.text_field :name, class: 'form-control mb-3' %>
       </div>
 
       <div class="field">
-        <%= f.label :avatar %>
+        <%= f.label :avatar, t('.avatar') %>
         <%= f.file_field :avatar,class: 'form-control mb-3' %>
         <%= f.hidden_field :avatar_cache %>
       </div>
 
       <div class="field">
-        <%= f.label :plofile %>
+        <%= f.label :plofile, t('.plofile') %>
         <%= f.text_area :plofile %>
       </div>
 

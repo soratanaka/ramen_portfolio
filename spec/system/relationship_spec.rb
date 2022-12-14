@@ -13,7 +13,7 @@ RSpec.describe 'フォローテスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit user_path(@user.id)
         expect(page).to have_button 'フォロー'
       end
@@ -21,7 +21,7 @@ RSpec.describe 'フォローテスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit user_path(@second_user.id)
         click_button 'フォロー'
         expect(page).to have_content "#{@second_user.name}さんをフォローしました"
@@ -30,7 +30,7 @@ RSpec.describe 'フォローテスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit user_path(@second_user.id)
         click_button 'フォロー'
         click_button 'つながりを解除'

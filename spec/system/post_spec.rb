@@ -13,7 +13,7 @@ RSpec.describe '投稿テスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         expect(page).to have_content "test_1"
         expect(page).to have_content "test_2"
       end
@@ -21,7 +21,7 @@ RSpec.describe '投稿テスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit user_path(@user.id)
         expect(page).to have_content "test_1"
         expect(page).to have_content "test_2"
@@ -30,7 +30,7 @@ RSpec.describe '投稿テスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit shop_path(@shop.id)
         expect(page).to have_content "test_1"
         expect(page).to have_content "test_2"
@@ -43,7 +43,7 @@ RSpec.describe '投稿テスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit new_post_path(shop_id:@shop.id)
         fill_in 'post[content]', with: "test"
         click_on "Create Post"
@@ -55,10 +55,29 @@ RSpec.describe '投稿テスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit new_post_path(shop_id:@shop.id)
         click_on "Create Post"
         expect(visit shop_path(@shop.id)).not_to have_content "test"
+      end
+    end
+    context '編集,削除テスト' do
+      it '投稿の編集が可能' do
+        visit new_user_session_path 
+        fill_in 'user[email]', with: @user.email
+        fill_in 'user[password]', with: @user.password
+        click_button "ログイン"
+        visit edit_post_path(@post.id)
+        fill_in 'post[content]', with: "testtest"
+        click_on "Update Post"
+        expect(page).to have_content "testtest"
+      end
+      it '投稿の削除が可能' do
+        visit new_user_session_path 
+        fill_in 'user[email]', with: @user.email
+        fill_in 'user[password]', with: @user.password
+        click_button "ログイン"
+        expect(page).to have_content "testtest"
       end
     end
   end

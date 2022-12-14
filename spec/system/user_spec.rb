@@ -31,14 +31,14 @@ RSpec.describe 'ユーザー管理機能', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         expect(page).to have_content "ログインしました。"
       end
       it '他人の詳細ページに飛べる' do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit user_path(@admin_user.id)
         expect(page).to have_content "管理者"
       end
@@ -46,7 +46,7 @@ RSpec.describe 'ユーザー管理機能', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         click_on 'ログアウト'
         expect(page).to have_content "ログアウトしました"
       end
@@ -57,7 +57,7 @@ RSpec.describe 'ユーザー管理機能', type: :system do
           visit new_user_session_path 
           fill_in 'user[email]', with: @admin_user.email
           fill_in 'user[password]', with: @admin_user.password
-          click_on "Log in"
+          click_button "ログイン"
           visit rails_admin_path
           expect(page).to have_content "サイト管理"
         end

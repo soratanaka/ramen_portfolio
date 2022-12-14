@@ -1,42 +1,42 @@
-<div style = "display:flex; justify-content: center;">
-<h2>gmap</h2>
-
-    <%= form_with url: toppages_path, local: true, method: :get do |f| %>
-      <%= f.text_field :word , name: "search"%>
-      <%= f.submit "検索", class: "btn btn-dark" %>
-    <% end %>
-</div>
-<div style="display:flex; justify-content: center;" >
-
-<div id='map'></div>
-<ul>
-  <p>検索数は最大20件のみです</p>
-  <% @places.each do |place| %>
-    <li><a style= "display:block;" class="post_name" onclick="zoom_shop('<%= place.lat %>','<%= place.lng %>')"><%= place.name %></a></li>
+<div class = "mt-3" style = "display:flex; justify-content: center;">
+  <%= form_with url: toppages_path, local: true, method: :get do |f| %>
+    <%= f.text_field :word , name: "search"%>
+    <%= f.submit "検索", class: "btn btn-dark" %>
   <% end %>
-</ul>
 </div>
 
-<!--<div jstcache="1891" class="Uf0tqf loaded" style="width: 406px; height: 406px; background-image: url(&quot;https://lh5.googleusercontent.com/p/AF1QipNuaUROeipAcCiFCMFb-YqzTBvWA8MkNO0YQB-V=s406-k-no&quot;);" jsan="7.Uf0tqf,7.loaded,5.width,5.height,5.background-image"> </div>-->
-<table class = "user_post">
-<tbody>
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= link_to post.user.name,user_path(post.user.id) %></td>
-    <td><%= link_to post.shop.name,shop_path(post.shop.id) %></td>
-    <td><%= post.content %></td>
-    <td><img src="<%= post.image %>" class = "shop_post_image"></td>    
-    <td><%= link_to 'Show', post %></td>
-    <%if user_signed_in? %>
-      <% if post.user_id == current_user.id %>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<div class = "mt-3" style="display:flex; justify-content: center;" >
+  <div id='map'></div>
+    <ul>
+      <p>検索数は最大20件のみです</p>
+      <% @places.each do |place| %>
+        <li class = "mt-1" style="font-size:1.1em"><a style= "display:block;" class="post_name" onclick="zoom_shop('<%= place.lat %>','<%= place.lng %>')"><%= place.name %></a></li>
       <% end %>
-    <% end %>
-  </tr>
-<% end %>
-</tbody>
-</table>
+    </ul>
+  </div>
+<!--<div jstcache="1891" class="Uf0tqf loaded" style="width: 406px; height: 406px; background-image: url(&quot;https://lh5.googleusercontent.com/p/AF1QipNuaUROeipAcCiFCMFb-YqzTBvWA8MkNO0YQB-V=s406-k-no&quot;);" jsan="7.Uf0tqf,7.loaded,5.width,5.height,5.background-image"> </div>-->
+  <div class = "post_table">
+    <table class="table table-hover">
+      <tbody>
+        <% @posts.each do |post| %>
+          <tr class = "post_one">
+            <td><%= link_to post.user.name,user_path(post.user.id) %></td>
+            <td><%= link_to post.shop.name,shop_path(post.shop.id) %></td>
+            <td><%= post.content %></td>
+            <td><img src="<%= post.image %>" class = "shop_post_image"></td>    
+            <td><%= link_to 'Show', post %></td>
+            <%if user_signed_in? %>
+              <% if post.user_id == current_user.id %>
+                <td><%= link_to 'Edit', edit_post_path(post) %></td>
+                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <style>
 #map {
@@ -52,16 +52,16 @@ var marker = [];
 var infoWindow = [];
 var allShops = gon.places;
 var markerData = [] 
-// 下の1行を追加 
 var display = document.getElementById('display')
-    for (var i = 0; i < allShops.length; i++) { 
-      markerData.push({
-      title: allShops[i]['name'],
-      lat: allShops[i]['lat'],
-      lng: allShops[i]['lng'],
-      add: allShops[0]['formatted_address'],
-      place_id : allShops[0]['place_id'],
-      content: allShops[i]['name'] + '<br><img src="./ippatsu.png" width="200"><br>'
+
+for (var i = 0; i < allShops.length; i++) { 
+  markerData.push({
+    title: allShops[i]['name'],
+    lat: allShops[i]['lat'],
+    lng: allShops[i]['lng'],
+    add: allShops[0]['formatted_address'],
+    place_id : allShops[0]['place_id'],
+    content: allShops[i]['name'] + '<br><img src="./ippatsu.png" width="200"><br>'
   });
 };
 
@@ -78,42 +78,41 @@ function zoom_shop(lat,lng){
       infoWindow[key].open(map, marker[key]);
     };
   });
-}
+};
 
 function initMap(){
   geocoder = new google.maps.Geocoder()
   var mapLatLng = new google.maps.LatLng({lat: markerData[0]['lat'], lng: markerData[0]['lng']});
   map = new google.maps.Map(document.getElementById('map'), {
-      center: mapLatLng, // 地図の中心座標を指定
-      zoom: 13, // 地図のデフォルトのズーム指定
+    center: mapLatLng, // 地図の中心座標を指定
+    zoom: 13, // 地図のデフォルトのズーム指定
   });
-
   allShopMarker(markerData)
   }
 
-  function allShopMarker(markerData){
-    for (var i = 0; i < markerData.length; i++) {
-    // 緯度経度のデータを作成
-      markerLatLng = new google.maps.LatLng({lat: markerData[i]['lat'], lng: markerData[i]['lng']});
-      marker[i] = new google.maps.Marker({
-        position: markerLatLng, // マーカーを立てる位置を指定
-        map: map, // マーカーを立てる地図を指定
-        title: markerData[i]['title'] // ツcヒント
-      });
-      // 吹き出しの設定
-      infoWindow[i] = new google.maps.InfoWindow({
-      // 吹き出しに表示する内容を設定する
-        content: `<a id="shop_content${i}" href="shops/show?content=${markerData[i].title}&lat=${markerData[i].lat}&lng=${markerData[i].lng}&add=${markerData[i].add}&place_id=${markerData[i].place_id}" >${markerData[i].title}</a><br />`
-      });
-      // マーカーにクリックイベントを追加
-      markerEvent(i);
-    }
+function allShopMarker(markerData){
+  for (var i = 0; i < markerData.length; i++) {
+  // 緯度経度のデータを作成
+    markerLatLng = new google.maps.LatLng({lat: markerData[i]['lat'], lng: markerData[i]['lng']});
+    marker[i] = new google.maps.Marker({
+      position: markerLatLng, // マーカーを立てる位置を指定
+      map: map, // マーカーを立てる地図を指定
+      title: markerData[i]['title'] // ツcヒント
+    });
+    // 吹き出しの設定
+    infoWindow[i] = new google.maps.InfoWindow({
+    // 吹き出しに表示する内容を設定する
+      content: `<a style = "color: #000;" id="shop_content${i}" href="shops/show?content=${markerData[i].title}&lat=${markerData[i].lat}&lng=${markerData[i].lng}&add=${markerData[i].add}&place_id=${markerData[i].place_id}" >${markerData[i].title}</a><br />`
+    });
+    // マーカーにクリックイベントを追加
+    markerEvent(i);
   }
+}
 
-  function markerEvent(i) {
-    marker[i].addListener('click', function() {
-      // 吹き出しの表示
-      infoWindow[i].open(map, marker[i]);
+function markerEvent(i) {
+  marker[i].addListener('click', function() {
+    // 吹き出しの表示
+    infoWindow[i].open(map, marker[i]);
   });
 }
 

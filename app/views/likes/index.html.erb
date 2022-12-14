@@ -1,9 +1,16 @@
-<h1>いいね一覧</h1>
-
-<% @like_shops.each do |shop| %>
-  <tr>
-    <td><%= link_to shop.name, shop_path(shop.id) %></td>
-    <td><%= shop.address %></td>
-    <td><%= link_to 'Show', shop %></td>
-  </tr>
-<% end %>
+<div class = "container mt-5">
+  <div class = "card mt-5" style="background-color: #f3682d;">
+    <div class = "card-body" style="color: #fff;">
+      <table class="table table-hover">
+        <h1>気になる一覧</h1>
+        <% @like_shops.each do |shop| %>
+          <tr>
+            <td><%= link_to shop.name, shop_path(shop.id) %></td>
+            <td><%= shop.address %></td>
+            <td><%= link_to 'Show', shop %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

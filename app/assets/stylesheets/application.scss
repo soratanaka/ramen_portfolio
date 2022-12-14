@@ -1,3 +1,5 @@
+
+
 /*
  *= require_tree .
  *= require_self
@@ -9,19 +11,87 @@
  @import '@fortawesome/fontawesome-free/scss/solid';
  @import '@fortawesome/fontawesome-free/scss/brands';
  @import 'bootstrap/scss/bootstrap';
- 
+
  // Devise用
- 
- .container-login {
-   @extend .container-fluid;
-   max-width: 576px;
-   padding: 2rem;
- }
- 
- .alert-notice {
-   @extend .alert-info;
- }
- 
- .alert-alert {
-   @extend .alert-danger;
- }
+
+
+  body{
+    background-color: #f3682d;
+  }
+  
+
+  .container-login {
+    @extend .container-fluid;
+    max-width: 576px;
+    padding: 2rem;
+  }
+
+  .alert-notice {
+    @extend .alert-info;
+  }
+
+  .alert-alert {
+    @extend .alert-danger;
+  }
+
+  a:visited {
+  color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  td{
+    color: #fff;
+  }
+
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+.header_list{
+  list-style:none;
+}
+
+header{
+  display:flex; 
+  background-color: #954846;
+  height: 50px;
+}
+
+header ul{
+  padding-left:0;
+}
+
+header li{
+  list-style:none;
+  display: inline;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  }
+
+.list_left{
+  justify-content:left;
+}
+
+.list_right{
+  justify-content:right;
+}
+
+.post_table{
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.post_one{
+  min-height: 100px;
+  height: auto !important;
+  height: 100px;
+}
+
+
+

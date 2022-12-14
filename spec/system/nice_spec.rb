@@ -13,7 +13,7 @@ RSpec.describe 'いいねテスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit post_path(@post.id)
         expect(page).not_to have_content "お気に入りする"
       end
@@ -21,7 +21,7 @@ RSpec.describe 'いいねテスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit post_path(@second_post.id)
         click_on "お気に入りする"
         expect(page).to have_content "ユーザーさんの投稿にいいねしました"
@@ -30,7 +30,7 @@ RSpec.describe 'いいねテスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit post_path(@second_post.id)
         click_on "お気に入りする"
         click_on "お気に入り解除する"

@@ -8,27 +8,32 @@
     <%= include_gon %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
   </head>
 
-  <header style = "display:flex; justify-content: center;">
-    <% if user_signed_in? %>
-      <%= link_to "ユーザー", user_path(current_user)%> 
-      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-      <%= link_to 'トップページ', toppages_path %>
-      <% if current_user.admin? %>
-        <%= link_to '管理者画面', rails_admin_path %>
-      <% end %>
-    <% else %>
-      <%= link_to 'ログイン', new_user_session_path %>
-      <%= link_to 'サインアップ', new_user_registration_path %>
-      <%= link_to 'トップページ', toppages_path %>
-      <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>
-      <%= link_to 'ゲストログイン（管理者用）', users_guest_admin_sign_in_path, method: :post %>
-    <% end %>
-    <p class="notice"><%= notice %></p>
-    <hr />
+  <header>
+    <div class = "container mt-2">
+      <div class = "row">
+        <ul>
+          <li class = "col-3" ><%= link_to 'トップページ', toppages_path %></li>
+          <% if user_signed_in? %>
+            <li class = "col-5" ><%= link_to "ユーザー", user_path(current_user)%> </li>
+            <li class = "col-4" ><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+            <% if current_user.admin? %>
+              <%= link_to '管理者画面', rails_admin_path %></li>
+            <% end %>
+          <% else %>
+            <li class = "col-3" ><%= link_to 'ログイン', new_user_session_path %></li>
+            <li class = "col-3" ><%= link_to 'サインアップ', new_user_registration_path %></li>
+            <li class = "col-3" ><%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %></li>
+            <li class = "col-3" ><%= link_to 'ゲストログイン（管理者用）', users_guest_admin_sign_in_path, method: :post %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </header>
-  
+
+
   <body>
     <%= yield %>
   </body>

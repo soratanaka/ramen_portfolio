@@ -13,7 +13,7 @@ RSpec.describe '投稿テスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         sleep 0.2
         fill_in 'word', with: "ひばりヶ丘"
         click_on "検索"

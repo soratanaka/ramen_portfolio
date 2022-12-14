@@ -1,4 +1,21 @@
-<p>フォロー一覧</p><br/>
-  <% @users.each do |user| %>
-  <%= user.name %>
-<% end %>
+
+<div class = "container mt-5">
+  <div class = "card mt-5" style="background-color: #f3682d;">
+    <div class = "card-body" style="color: #fff;">
+      <table class="table table-hover">
+        <h1>フォロー一覧</h1>
+        <% @users.each do |user| %>
+          <td><%= image_tag user.avatar.url, :size =>'200x200' %></td>  
+          <td style="font-size:1.5em"><%= link_to user.name, user_path(user.id) %></td>
+            <td style="font-size:1.5em">
+            <% if user.plofile.present? %>
+              <%= user.plofile %>
+            <% else %>
+              <p>無記入</p>
+            <% end %>
+          </td>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

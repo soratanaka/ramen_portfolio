@@ -9,23 +9,20 @@
       </ul>
     </div>
   <% end %>
-
-  <td><%= @post.shop.name %></td>
-
-  <%= form.hidden_field :shop_id, :value => @post.shop_id %>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-
-<div class="field">
-  <%= form.label :image %>
-  <%= form.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-
+  <div class = "card mt-5" style="background-color: #f3682d;">
+    <div class = "card-body" style="color: #fff;">
+      <td><%= @post.shop.name %></td>
+      <%= form.hidden_field :shop_id, :value => @post.shop_id %>
+      <div class="field">
+        <%= form.label :content %>
+        <%= form.text_field :content %>
+      </div>
+    <div class="field">
+      <%= form.label :image %>
+      <%= form.file_field :image %>
+    </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>

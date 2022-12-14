@@ -13,7 +13,7 @@ RSpec.describe 'お気に入りテスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit shop_path(@shop.id)
         click_on "お気に入りする"
         expect(page).to have_content "#{@shop.name}を気になる登録しました"
@@ -22,7 +22,7 @@ RSpec.describe 'お気に入りテスト', type: :system do
         visit new_user_session_path 
         fill_in 'user[email]', with: @user.email
         fill_in 'user[password]', with: @user.password
-        click_on "Log in"
+        click_button "ログイン"
         visit shop_path(@shop.id)
         click_on "お気に入りする"
         click_on "お気に入り解除する"

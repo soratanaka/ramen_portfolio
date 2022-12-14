@@ -1,28 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class = "container" style="color: #fff;">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-    <p>  <% @post.content %></p>
-  <strong>Image:</strong>
-  <% if @post.image? %>
-    <%= image_tag @post.image.url %>
-  <% else %>
-    <p>no image</p>
-  <% end %>
-</p>
-
-<%if user_signed_in? %>
-
-  <% unless @post.user_id == current_user.id %>
-    <% if @nice.present? %>
-      <%= link_to 'お気に入り解除する', nice_path(id: @nice.id), method: :delete, class: 'btn btn-danger' %>
+  <h1>
+    <h1>name:</h1>
+    <h3><%= @post.user.name %></h3>
+    <h1>Content:</h1>
+    <h3><%= @post.content %></h3>
+    <h1>Image:</h1>
+    <% if @post.image? %>
+      <%= image_tag @post.image.url %>
     <% else %>
-      <%= link_to 'お気に入りする', nices_path(post_id: @post.id), method: :post, class: 'btn btn-primary' %>
+      <h5>no image</h5>
     <% end %>
-  <% else %>
-    <%= link_to 'Edit', edit_post_path(@post) %> |
+  </h1>
+
+  <%if user_signed_in? %>
+
+    <% unless @post.user_id == current_user.id %>
+      <% if @nice.present? %>
+        <%= link_to 'お気に入り解除する', nice_path(id: @nice.id), method: :delete, class: 'btn btn-danger' %>
+      <% else %>
+        <%= link_to 'お気に入りする', nices_path(post_id: @post.id), method: :post, class: 'btn btn-primary' %>
+      <% end %>
+    <% else %>
+      <%= link_to 'Edit', edit_post_path(@post) ,class: "btn btn-primary"%> 
+    <% end %>
+
   <% end %>
 
-<% end %>
-
+</div>

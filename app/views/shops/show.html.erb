@@ -1,75 +1,86 @@
-<h1>店舗情報</h1>
+<div class = "container">
+  <div class = "row">
+    <div class = "col-9">
+      <table class = "table">
+      <% unless @posts.nil? %>
+        <thead>
+          <tr style="color: #fff;">
+            <th>name</th>
+            <th>Content</th>
+            <th>Image</th>
+          </tr>
+        </thead>
 
-<p>店舗名：<%= @name %></p>
-<p>住所　：<%= @address  %></p>
-<% begin %>
-  <% if @opening_time["open_now"] == true %>
-    <p>営業　；営業中</p>
-  <%else%>
-    <p>営業　：準備中</p>
-  <%end%>
-<% rescue NoMethodError %>
-  <p>営業　：未登録</p>
-<%end%>
+        <tbody>
+          <% @posts.each do |post| %>
+            <tr>
+              <td><%= link_to post.user.name,user_path(post.user.id) %></td>
+              <td><%= post.content %></td>
+              <td><img src="<%= post.image %>" width="200"></td>    
+              <td><%= link_to 'Show', post %></td>
+              <%if user_signed_in? %>
+              <% if post.user_id == current_user.id %>
+                <td><%= link_to 'Edit', edit_post_path(post) %></td>
+                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+        <%else%>
+          <p>投稿はありません<p>
+      <% end %>
+      </table>
+    </div>
 
-<h2>opening_time</h2>
-<% begin %>
-  <% @opening_time["weekday_text"].each do |opening_day| %>
-    <p><%= opening_day %></p>
-  <% end %>
-<% rescue NoMethodError %>
-  <p>未登録</p>
-<% end %>
+    <div class="col-3">
+      <h1 class = "mt-4" style="color: #fff;">店舗情報</h1>
 
-<table>
-<% unless @posts.nil? %>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>Image</th>
-    </tr>
-  </thead>
+      <h5 style="color: #fff;">店舗名：<%= @name %></p>
+      <p>住所　：<%= @address  %></p>
+      <% begin %>
+        <% if @opening_time["open_now"] == true %>
+          <p>営業　；営業中</p>
+        <%else%>
+          <p>営業　：準備中</p>
+        <%end%>
+      <% rescue NoMethodError %>
+        <p>営業　：未登録</p>
+      <%end%>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to post.user.name,user_path(post.user.id) %></td>
-        <td><%= post.content %></td>
-        <td><img src="<%= post.image %>" width="100"></td>    
-        <td><%= link_to 'Show', post %></td>
-        <%if user_signed_in? %>
-        <% if post.user_id == current_user.id %>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <h2 style="color: #fff;">opening_time</h2>
+      <% begin %>
+        <% @opening_time["weekday_text"].each do |opening_day| %>
+          <p><%= opening_day %></p>
         <% end %>
+      <% rescue NoMethodError %>
+        <p>未登録</p>
+      <% end %>
+
+      <%if user_signed_in? %>
+        <% if @shop.nil? %>
+          <%= link_to 'お気に入りする', shops_path(shop: {name:@name, latitude:@lat, longitude:@lng, address:@address, place_id:@place_id},like_id:true), method: :post, class: 'btn btn-primary' %>
+          <td><%= link_to '投稿する',shops_path(shop: {name:@name, latitude:@lat, longitude:@lng, address:@address, place_id:@place_id},like_id:false), method: :post %></td>
+        <% else %>
+          <% if @like.present? %>
+            <%= link_to 'お気に入り解除する', like_path(id: @like.id), method: :delete, class: 'btn btn-danger' %>
+          <% else %>
+            <%= link_to 'お気に入りする', likes_path(shop_id:@shop.id), method: :post, class: 'btn btn-primary' %>
+          <% end %>
+          <td><%= link_to '投稿する',new_post_path(shop_id:@shop.id)%></td>
         <% end %>
-      </tr>
-    <% end %>
-  </tbody>
+      <%end%>
+    </div>
+  </div>
+</div>
+
+<div class = "container m-5">
+  <h3 style="color: #fff;">GoogleMapでのレビュー</h3>
+  <%if @reviews.nil? || @reviews.empty?%>
+    <p>投稿がありません</p>
   <%else%>
-    <p>投稿はありません<p>
-<% end %>
-</table>
-
-<%if user_signed_in? %>
-  <% if @shop.nil? %>
-    <%= link_to 'お気に入りする', shops_path(shop: {name:@name, latitude:@lat, longitude:@lng, address:@address, place_id:@place_id},like_id:true), method: :post, class: 'btn btn-primary' %>
-    <td><%= link_to '投稿する',shops_path(shop: {name:@name, latitude:@lat, longitude:@lng, address:@address, place_id:@place_id},like_id:false), method: :post %></td>
-  <% else %>
-    <% if @like.present? %>
-      <%= link_to 'お気に入り解除する', like_path(id: @like.id), method: :delete, class: 'btn btn-danger' %>
-    <% else %>
-      <%= link_to 'お気に入りする', likes_path(shop_id:@shop.id), method: :post, class: 'btn btn-primary' %>
+    <% @reviews.each do |review| %>
+      <p><%= review.text %></p>
     <% end %>
-    <td><%= link_to '投稿する',new_post_path(shop_id:@shop.id)%></td>
   <% end %>
-<%end%>
-
-<h3>GoogleMapでのレビュー</h3>
-<%if @reviews.nil? || @reviews.empty?%>
-  <p>投稿がありません</p>
-<%else%>
-  <% @reviews.each do |review| %>
-    <p><%= review.text %></p>
-  <% end %>
-<% end %>
+</div>

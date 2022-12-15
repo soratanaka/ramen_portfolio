@@ -1,13 +1,15 @@
 <div class = "container mt-5">
   <h1 style="color: #fff;"><%= t('.sign_in') %></h1>
+
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= bootstrap_devise_error_messages! %>
+    
     <div class = "card mt-5" style="background-color: #f3682d;">
       <div class = "card-body" style="color: #fff;">
         <div class="form-group">
           <%= f.label :email %>
           <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
         </div>
-
         <div class="form-group">
           <%= f.label :password %>
           <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control' %>

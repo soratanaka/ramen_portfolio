@@ -40,7 +40,7 @@ class User < ApplicationRecord
     find_or_create_by!(email: 'admin_guest@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
       user.admin = true
-      user.confirmed_at = Time.now￥
+      user.confirmed_at = Time.now
       user.avatar = nil
       user.plofile = "ゲスト"
       user.name = "ゲストユーザー(管理者)"

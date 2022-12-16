@@ -63,8 +63,8 @@ for (var i = 0; i < allShops.length; i++) {
     title: allShops[i]['name'],
     lat: allShops[i]['lat'],
     lng: allShops[i]['lng'],
-    add: allShops[0]['formatted_address'],
-    place_id : allShops[0]['place_id'],
+    add: allShops[i]['formatted_address'],
+    place_id : allShops[i]['place_id'],
     content: allShops[i]['name'] + '<br><img src="./ippatsu.png" width="200"><br>'
   });
 };

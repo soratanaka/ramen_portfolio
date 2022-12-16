@@ -27,7 +27,7 @@ class ShopsController < ApplicationController
       @name = @shop.name
       @address = @shop.address
       if @shop.place_id != params[:place_id]
-        shop.update(place_id: params[:place_id] )
+        @shop.update(place_id: params[:place_id] )
       end
       @place_id = @shop.place_id
       if user_signed_in?
@@ -41,7 +41,7 @@ class ShopsController < ApplicationController
       @name = @shop.name
       @address = @shop.address
       if @shop.place_id != params[:place_id]
-        shop.update(place_id: params[:place_id] )
+        @shop.update(place_id: params[:place_id] )
       end
       @place_id = @shop.place_id
       if user_signed_in?

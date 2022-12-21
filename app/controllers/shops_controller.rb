@@ -40,9 +40,6 @@ class ShopsController < ApplicationController
       @shop = Shop.find(params[:id])
       @name = @shop.name
       @address = @shop.address
-      if @shop.place_id != params[:place_id]
-        @shop.update(place_id: params[:place_id] )
-      end
       @place_id = @shop.place_id
       if user_signed_in?
         @like = current_user.likes.find_by(shop_id: @shop.id)
